@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>FoundVibe</title>
+      
+        <link href="3.css" rel="stylesheet" type="text/css">
+        <script src="../src/script.js" type="module"></script>
+        <script src="./src/apps.js" type="module"></script>
+
+        <a id="twitter-share-button">
+            <img src="./src/img/twitter.jpg" alt="Twitter Share Button">
+        </a>
+
+        <style>
+             #twitter-share-button img {
+               margin-left: 92%;
+               width: 1.6%;
+               height: 1.6%;
+            }
+            #island-container {
+              width: 100%;
+              height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+      <div class="button-container">
+        <div class="background-image">
+            <img src="./src/img/background.png" alt="Background Image">
+        </div>
+        <img src="./src/img/bar.png" alt="Overlay Image" class="overlay2">
+        <div class="start">
+            <button class="another3-image" id="all-button">
+                <img src="./src/img/alltime.png" alt="Another Image">
+            </button>
+            <p class="font1">
+                対象とする期間を選択してください
+            </p>
+            <div id="island-container" style="display: none;"></div>
+
+           
+        </div>
+    </div>
+    </body>
+    <script>
+        function shareOnTwitter() {
+          const urlToShare = "https://foundvibes.com"; // Replace with your actual URL to be shared
+          const tweetText = "#FoundVibes #私の音楽世界\n"; // Replace with your desired tweet text
+          const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(urlToShare)}&text=${encodeURIComponent(tweetText)}`;
+          
+          // Open Twitter share dialog in a new window
+          window.open(twitterShareUrl, "_blank");
+        }
+        
+        const twitterShareButton = document.getElementById("twitter-share-button");
+        twitterShareButton.addEventListener("click", shareOnTwitter);
+      
+        
+      </script>
+</html>
